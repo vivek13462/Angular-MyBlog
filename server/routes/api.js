@@ -17,7 +17,7 @@ router.get('/all', function(req, res){
     article.find({ })
        .exec(function(err, articles) {
           if(err){
-        console.log("Error getting About me Info");
+        console.log("Error getting Article Info");
     }else{
         console.log(articles);
         console.log("I am Here.!!");
