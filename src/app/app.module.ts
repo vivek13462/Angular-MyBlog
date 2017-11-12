@@ -10,6 +10,7 @@ import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
 import { ArticleService } from './article.service';
 import { ArticleComponent } from './article/article.component';
+import { CreateComponent } from './create/create.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { ArticleComponent } from './article/article.component';
     AppComponent,
     HeaderComponent,
     HomeComponent,
-    ArticleComponent
+    ArticleComponent,
+    CreateComponent
   ],
   imports: [
     BrowserModule,
