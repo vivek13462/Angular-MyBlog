@@ -18,7 +18,7 @@ articles: Array<Article>;
   constructor(private _articleService: ArticleService, private router: Router, private aR: ActivatedRoute, private fb: FormBuilder) { }
 
   ngOnInit() {
-    this._articleService.getArticle()
+    this._articleService.getArticles()
         .subscribe(res => this.articles = res);
       
     this.articleFrm = this.fb.group({
@@ -29,7 +29,7 @@ articles: Array<Article>;
 addArticle(article: Article) {
     this._articleService.insertArticle(article)
         .subscribe(newArticle => {
-    this.article.push(newArticle);
+    this.articles.push(newArticle);
     this.router.navigateByUrl('/');
         }) 
 }

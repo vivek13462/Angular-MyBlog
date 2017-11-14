@@ -5,13 +5,13 @@
 <label>Article title
     <input type="text" name="title" [formControl]="articleFrm.controls['title']" formControlName="title">
 </label>
-<div class="alert" *ngIf="!articleFrm.controls['title].valid && articleFrm.controls['title].touched">
+<div class="alert" *ngIf="!articleFrm.controls['title'].valid && articleFrm.controls['title'].touched">
 You must specify a title that's atleast 10 characters long
 </div>    
 <label>Description
 <textarea id="content" name="content" required [formControl]="articleFrm.controls['content']" formControlName="content"></textarea>    
 </label>
-<div class="alert" *ngIf="!articleFrm.controls['content].valid && articleFrm.controls['content].touched">
+<div class="alert" *ngIf="!articleFrm.controls['content'].valid && articleFrm.controls['content'].touched">
 You must specify a content that's atleast 10 characters long
 </div>  
 <input type="submit" class="cta-btn filled" value="Post Article" [disabled]="!articleFrm.valid">    
