@@ -52,4 +52,19 @@ router.post('/create', function(req, res) {
     });
 });
 
+router.post('/update/:id', function(req, res) {
+    console.log("updating the article");
+    article.findById(req.params.id)
+       .exec(function(err, article) {
+        if(err){
+            console.log("Error updating the article");
+        } else{
+            article.title = req.body.title;
+            article.content = req.body.content;
+            article.save();
+            res.json(article);
+        }
+    });
+});
+
 module.exports = router;
