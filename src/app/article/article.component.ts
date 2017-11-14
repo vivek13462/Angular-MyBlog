@@ -24,4 +24,12 @@ let id = params['id'];
     });
   }
 
+deleteArticle(articleId){
+    this._articleService.deleteArticles(articleId)
+    .subscribe(res => {
+    this.router.navigateByUrl('/');   
+    })
+    };
+    
 }
+
